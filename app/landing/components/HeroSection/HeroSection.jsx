@@ -1,4 +1,4 @@
-import styles from "./Hero.module.css"
+import styles from "./HeroSection.module.css"
 import Image from "next/image"
 
 import Button from "../button/button"
