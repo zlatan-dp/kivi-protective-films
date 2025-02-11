@@ -1,4 +1,4 @@
-import styles from "./hero.module.css"
+import styles from "./Hero.module.css"
 import Image from "next/image"
 
 import Button from "../button/button"
@@ -6,17 +6,18 @@ import Button from "../button/button"
 export default function Hero() {
     return (
         <div className={styles.container}>
-        <div className={styles.heroInfo}>
-            <p className={styles.mainText}>günstiger</p>
-            <p className={styles.infoText}>als ein Display-Austausch!*</p>
-        </div>
-        <div className={styles.imgWrap}>
-            <Image src="/images/hero_text.svg"
-            alt="logo" width={320}
-            height={170}
-            style={{ width: "100%", height: "auto" }} />
-        </div>
-        <Button href="/">Schutzfolie wählen</Button>
-    </div>   
+            <div className={styles.heroInfo}>
+                <p className={styles.mainText}>günstiger</p>
+                <p className={styles.infoText}>als ein Display-Austausch!*</p>
+            </div>
+            <div className={styles.imgWrap}>
+                <Image src="/images/hero_text.svg"
+                alt="logo"
+                width={320}
+                height={170}
+                style={{ width: "100%", height: "auto" }} />
+            </div>
+            <Button href="/">Schutzfolie wählen</Button>
+        </div>   
     )
 }
