@@ -1,0 +1,46 @@
+.container {
+    padding: 40px 20px;
+    border-radius: 20px 20px 0 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    background-image: url("/images/protective_bg.png");
+    background-color: var(--black);
+    background-repeat: no-repeat;
+    background-position: top;
+    background-size: cover;
+    height: 600px;
+}
+
+.infoWrap {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    margin-bottom: 60px;
+    margin-top: auto;
+}
+
+.subTitle {
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 120%;
+    color: var(--accent);
+    position: relative;
+}
+
+.subTitle::after {
+    content: '';
+    position: absolute;
+    bottom: 15px;
+    left: 145px;
+    display: block;
+    width: 195px;
+    height: 165px;
+    background-image: url("/images/protective_line.svg");
+    background-repeat: no-repeat;
+}
+
+.text {
+    font-weight: 400;
+    font-size: 14px;
+}
