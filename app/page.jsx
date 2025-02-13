@@ -4,6 +4,7 @@ import Protective from "./components/Protective/Protective"
 import Realiability from "./components/Reliability/Reliability"
 import AdvantageSection from "./components/Advantage/Advantage"
 import Faq from "./components/Faq/Faq"
+import Feedback from "./components/Feedback/Feedback"
 
 export default function filmsLanding() {
     return (
@@ -28,6 +29,7 @@ export default function filmsLanding() {
                 title={'DU SCHÄTZT HOCHWERTIGE TECHNIK?'}
                 bgImage={"/images/advantage_bg_5.png"}/>
             <Faq />
+            <Feedback />
         </>
     )
 }
