@@ -12,7 +12,7 @@ import { FeedbackData } from "./FeedbackData"
 
 export default function Feedback() {
     return (
-        <div className={styles.container}>
+        <div className={styles.feedbackContainer}>
             <SectionTitle align={'center'}>Kunden&shy;rezensionen</SectionTitle>
             <Swiper
                 modules={[Pagination]}
