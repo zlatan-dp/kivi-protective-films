@@ -3,6 +3,7 @@ import FilmsInfo from "./components/FilmsInfo/FilmsInfo"
 import Protective from "./components/Protective/Protective"
 import Realiability from "./components/Reliability/Reliability"
 import AdvantageSection from "./components/Advantage/Advantage"
+import Faq from "./components/Faq/Faq"
 
 export default function filmsLanding() {
     return (
@@ -26,6 +27,7 @@ export default function filmsLanding() {
             <AdvantageSection 
                 title={'DU SCHÄTZT HOCHWERTIGE TECHNIK?'}
                 bgImage={"/images/advantage_bg_5.png"}/>
+            <Faq />
         </>
     )
 }
