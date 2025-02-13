@@ -1,0 +1,12 @@
+.container {
+    padding: 0px 20px 100px 20px;
+    background-color: var(--black);
+}
+
+.text {
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 171%;
+    color: var(--white);
+    opacity: 0.75;
+}

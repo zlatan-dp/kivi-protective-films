@@ -5,6 +5,7 @@ import Realiability from "./components/Reliability/Reliability"
 import AdvantageSection from "./components/Advantage/Advantage"
 import Faq from "./components/Faq/Faq"
 import Feedback from "./components/Feedback/Feedback"
+import Explanation from "./components/Explanation/Explanation"
 
 export default function filmsLanding() {
     return (
@@ -30,6 +31,7 @@ export default function filmsLanding() {
                 bgImage={"/images/advantage_bg_5.png"}/>
             <Faq />
             <Feedback />
+            <Explanation />
         </>
     )
 }
