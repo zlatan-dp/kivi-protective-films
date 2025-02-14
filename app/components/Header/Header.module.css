@@ -1,0 +1,14 @@
+.container {
+    position: fixed;
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    max-width: 400px;
+    padding: 10px 0px;
+    background-color: var(--black);
+}
+
+.logoWrap {
+    width: 74px;
+    height: 24px;
+}

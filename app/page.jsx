@@ -1,3 +1,4 @@
+import Header from "./components/Header/Header"
 import HeroSection from "./components/HeroSection/HeroSection"
 import FilmsInfo from "./components/FilmsInfo/FilmsInfo"
 import Protective from "./components/Protective/Protective"
@@ -10,6 +11,7 @@ import Explanation from "./components/Explanation/Explanation"
 export default function filmsLanding() {
     return (
         <>
+            <Header />
             <HeroSection />
             <FilmsInfo />
             <Protective />
