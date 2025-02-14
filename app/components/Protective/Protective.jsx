@@ -21,8 +21,9 @@ export default function Protective() {
         let ctx = gsap.context(() => {
             ScrollTrigger.create({
                 trigger: section,
-                start: "top center",
-                end: "+=300%",
+                start: "top top",
+                // end: "+=300%",
+                end: `+=${window.innerHeight * ProtectiveData.length}`,
                 pin: true,
                 scrub: true,
                 onUpdate: (self) => {
