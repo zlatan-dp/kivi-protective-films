@@ -11,7 +11,7 @@
     background-position: top;
     background-size: cover;
     height: 600px;
-    transition: background-image 0.3s ease;
+    transition: background-image 0.7s ease;
 }
 
 .infoWrap {
