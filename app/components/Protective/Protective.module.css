@@ -23,6 +23,7 @@
 }
 
 .subTitle {
+    max-width: 170px;
     font-weight: 500;
     font-size: 20px;
     line-height: 120%;
@@ -33,7 +34,7 @@
 .subTitle::after {
     content: '';
     position: absolute;
-    bottom: 15px;
+    bottom: 22px;
     left: 145px;
     display: block;
     width: 195px;
