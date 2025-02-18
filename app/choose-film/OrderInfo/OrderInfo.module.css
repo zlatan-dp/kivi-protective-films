@@ -1,0 +1,30 @@
+.wrapper {
+    margin-top: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.diagonalWrap {
+    width: 101px;
+    height: 66px;
+    background-image: url('/images/diagonal-wrap.svg');
+    background-repeat: no-repeat;
+}
+
+.xIcon {
+    width: 25px;
+    height: 25px;
+    background-image: url('/images/x-icon.svg');
+    background-repeat: no-repeat;
+    background-position: center;
+
+}
+
+.countWrap {
+    border: 2px solid var(--accent);
+    border-radius: 100px;
+    padding: 10px;
+    width: 118px;
+    height: 44px;
+}

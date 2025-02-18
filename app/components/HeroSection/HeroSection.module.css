@@ -1,10 +1,13 @@
 .container {
-    padding: 40px 20px 20px 20px;
+    position: relative;
+    padding: 20px;
+    margin-top: 64px;
+    margin-bottom: 40px;
     background-image: url("/images/hero_bg.png");
     background-color: var(--black);
     background-repeat: no-repeat;
     background-position: right;
-    height: 600px;
+    height: 620px;
 }
 
 .heroInfo {
@@ -35,4 +38,14 @@
     height: 170px;
     margin-top: 50px;
     margin-bottom: 60px;
+}
+
+.arrows {
+    position: absolute;
+    left: 50%;
+    bottom: 8px;
+    transform: translateX(-50%);
+    width: 24px;
+    height: 36px;
+    background-image: url('/images/hero_arrows.png');
 }

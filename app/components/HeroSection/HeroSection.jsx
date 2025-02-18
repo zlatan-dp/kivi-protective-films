@@ -17,7 +17,8 @@ export default function Hero() {
                 height={170}
                 style={{ width: "100%", height: "auto" }} />
             </div>
-            <Button href="/">Schutzfolie wählen</Button>
+            <Button href="/choose-film">Schutzfolie wählen</Button>
+            <div className={styles.arrows}></div>
         </div>   
     )
 }

@@ -1,0 +1,24 @@
+.title {
+    font-weight: 600;
+    font-size: 24px;
+    line-height: 110%;
+    color: var(--white);
+    margin-bottom: 20px;
+    padding-left: 20px;
+}
+
+.chooseWrap {
+    display: flex;
+    justify-content: space-between;
+    padding-bottom: 10px;
+    border-bottom: solid 1px #ffffff25;
+}
+
+.chooseText {
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 133%;
+    text-align: center;
+    color: var(--white);
+    padding: 0 40px 0 20px;
+}

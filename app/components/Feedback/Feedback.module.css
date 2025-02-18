@@ -1,8 +1,7 @@
 .feedbackContainer {
     padding: 40px 20px;
     background-color: var(--black);
-    margin-bottom: 40px;
-}
+  }
 
 .name {
     font-weight: 600;
