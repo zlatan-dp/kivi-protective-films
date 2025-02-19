@@ -5,6 +5,13 @@
   --red: #ff1a26;
 }
 
+@font-face {
+  font-family: "Aptos";
+  src: url("/fonts/aptos-bold.ttf") format("truetype");
+  font-weight: bold;
+  font-style: normal;
+}
+
 html,
 body {
   max-width: 400px;
