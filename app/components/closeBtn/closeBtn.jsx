@@ -9,7 +9,7 @@ export default function CloseBtn() {
     const router = useRouter()
 
     const goToNextStep = () => {
-        router.push("/")    
+        router.push("/why-cancel")    
     }
 
     return (
