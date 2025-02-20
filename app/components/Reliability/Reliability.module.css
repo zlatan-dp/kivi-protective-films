@@ -34,7 +34,7 @@
     /* font-size: 18px; */
     font-size: clamp(15px, calc(15px + (18 - 15) * ((100vw - 320px) / (370 - 320))), 18px);
     line-height: 100%;
-    text-transform: uppercase;
+    /* text-transform: uppercase; */
     color: var(--red);
     margin-bottom: 8px;
 }
