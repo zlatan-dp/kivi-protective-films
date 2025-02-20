@@ -31,10 +31,16 @@
 
 .order {
     position: absolute;
-    width: 100%;
+    width: 80%;
     top: 35%;
+    left: 50%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 4px;
+    transform: translateX(-50%);
     font-weight: 400;
-    font-size: 25px;
+    font-size: 16px;
     line-height: 110%;
     text-align: center;
     color: var(--accent)
