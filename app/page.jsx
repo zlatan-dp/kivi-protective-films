@@ -1,3 +1,5 @@
+'use client'
+
 import Header from "./components/Header/Header"
 import HeroSection from "./components/HeroSection/HeroSection"
 import FilmsInfo from "./components/FilmsInfo/FilmsInfo"
@@ -8,7 +10,13 @@ import Faq from "./components/Faq/Faq"
 import Feedback from "./components/Feedback/Feedback"
 import Explanation from "./components/Explanation/Explanation"
 
+import { getStoredAnswers } from "./actions/saveToStorage"
+
 export default function filmsLanding() {
+
+    console.log(getStoredAnswers());
+    
+
     return (
         <>
             <Header />
@@ -23,7 +31,7 @@ export default function filmsLanding() {
                 title={'DU HAST VERSPIELTE HAUSTIERE?'}
                 bgImage={"/images/advantage_bg_2.png"}/>
             <AdvantageSection 
-                title={'DU SPIELST AUF HÖCHSTEM LEVEL?'}
+                title={'DU BIST EIN AKTIVER GAMER?'}
                 bgImage={"/images/advantage_bg_3.png"}/>
             <AdvantageSection 
                 title={<>Fieberst du<br /> voll mit?!</>}

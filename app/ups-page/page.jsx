@@ -4,6 +4,8 @@ import styles from "./page.module.css";
 
 import {useRouter} from "next/navigation"
 
+import { saveAnswer } from "../actions/saveToStorage";
+
 import QuizWrap from "../components/QuizWrap/QuizWrap"
 import WhiteBtn from "../components/whiteBtn/whiteBtn";
 
@@ -11,6 +13,7 @@ export default function UpsPage () {
     const router = useRouter()
 
     const goToNextStep = () => {
+        saveAnswer({ step: 5, type: "ups, back to main"})
         router.push("/")     
     }
 

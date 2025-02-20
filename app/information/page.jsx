@@ -5,6 +5,8 @@ import styles from "./page.module.css";
 import {useRouter} from "next/navigation"
 import { useState } from "react";
 
+import { saveAnswer } from "../actions/saveToStorage";
+
 import classNames from "classnames";
 
 import QuizWrap from "../components/QuizWrap/QuizWrap"
@@ -41,8 +43,7 @@ export default function Information () {
     const goToNextStep = (e) => {
         e.preventDefault();
         if (validateForm()) {
-            console.log("Name:", name);
-            console.log("Email:", email);
+            saveAnswer({ step: 4, type: "info about client", answer: {Name: name, Email: email}, question: "select name, email" })
             router.push("/ups-page");
         }   
     }

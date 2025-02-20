@@ -17,7 +17,7 @@ export const FaqData = [
     {
         id: 4,
         question: 'Beeinträchtigt die Schutzfolie die Bildqualität?',
-        answer: 'Nein, die Folie ist hochtransparent und beeinträchtigt die Bildqualität nicht.',
+        answer: 'Nein, die hochwertige Silikonschicht ermöglicht eine spurlose Entfernung.',
     },
     {
         id: 5,

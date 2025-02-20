@@ -9,7 +9,7 @@ export const ReliabilityData = [
         id: 2,
         img: '/images/reliability-2.svg',
         title: 'STÖßEN',
-        text: 'Durch kleine gegenstände oder spielzeug',
+        text: 'Durch kleine Gegenstände oder Spielzeug',
     },
     {
         id: 3,

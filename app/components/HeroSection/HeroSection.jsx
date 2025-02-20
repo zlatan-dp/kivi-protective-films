@@ -8,7 +8,7 @@ export default function Hero() {
         <div className={styles.container}>
             <div className={styles.heroInfo}>
                 <p className={styles.mainText}>günstiger</p>
-                <p className={styles.infoText}>als ein Display-Austausch!*</p>
+                <p className={styles.infoText}>als ein Bildschirm-Austausch!</p>
             </div>
             <div className={styles.imgWrap}>
                 <Image src="/images/hero_text.svg"

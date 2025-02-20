@@ -5,8 +5,6 @@ import {FilmsData} from './FilmsInfoData'
 
 export default function FilmsInfo() {
 
-console.log(FilmsData);
-
     return (
         <div className={styles.container}>
             <ul>

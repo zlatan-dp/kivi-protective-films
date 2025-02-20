@@ -5,6 +5,8 @@ import styles from "./page.module.css";
 import {useRouter} from "next/navigation"
 import { useEffect, useState } from "react";
 
+import { saveAnswer } from "../actions/saveToStorage";
+
 import classNames from "classnames";
 
 import QuizWrap from "../components/QuizWrap/QuizWrap"
@@ -60,6 +62,7 @@ export default function OrderInformation() {
     const { totalFullPrice, totalDiscountPrice } = calculateTotalPrice();
 
     const goToNextStep = () => {
+        saveAnswer({ step: 3, type: "order info"})
         router.push("/information")     
     }
 

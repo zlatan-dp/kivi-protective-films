@@ -13,10 +13,9 @@
 .heroInfo {
     padding: 90px 20px 20px 20px;
     width: 147px;
-    background-image: url("/images/hero_logo_bg.png");
+    background-image: url("/images/hero_logo_bg.svg");
     color: var(--accent);
     background-repeat: no-repeat;
-    background-position-x: 7px;
 }
 
 .mainText {
@@ -47,5 +46,5 @@
     transform: translateX(-50%);
     width: 24px;
     height: 36px;
-    background-image: url('/images/hero_arrows.png');
+    background-image: url('/images/hero_arrows.svg');
 }
