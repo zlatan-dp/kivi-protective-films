@@ -26,6 +26,9 @@ export default function filmsLanding() {
                 title={'DU SPIELST AUF HÖCHSTEM LEVEL?'}
                 bgImage={"/images/advantage_bg_3.png"}/>
             <AdvantageSection 
+                title={<>Fieberst du<br /> voll mit?!</>}
+                bgImage={"/images/advantage_bg_6.png"}/>
+            <AdvantageSection 
                 title={<>DU BIST<br /> GESCHÄFTS&shy;INHABER?</>}
                 bgImage={"/images/advantage_bg_4.png"}/>
             <AdvantageSection 

@@ -6,7 +6,7 @@ export default function AdvantageSection ({title, bgImage}) {
     return (
         <div className={styles.container} style={{backgroundImage: `url(${bgImage})`}}>
             <SectionTitle align={'left'}>{title}</SectionTitle>
-            <Button href={'/'}>SCHÜTZE DEINEN TV!</Button>
+            <Button href={'/choose-film'}>SCHÜTZE DEINEN TV!</Button>
         </div>
     )
 }

@@ -17,7 +17,7 @@ export default function OrderInformation() {
     const router = useRouter()
 
     const goToNextStep = () => {
-        router.push("/order-info")     
+        router.push("/information")     
     }
 
     return (

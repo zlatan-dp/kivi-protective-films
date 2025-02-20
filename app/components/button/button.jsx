@@ -10,8 +10,7 @@ export default function Button ({ children, href }) {
 
     const goToNextStep = () => {
         router.push(href)
-        // console.log('CLICK!');        
-    }
+        }
 
     return (
         <div className={styles.btn} onClick={goToNextStep}>{children}</div>

@@ -32,7 +32,7 @@ export default function Protective() {
                     ))}
                 </Swiper>
 
-            <Button href="/">JETZT SCHUTZ WÄHLEN</Button>
+            <Button href="/choose-film">JETZT SCHUTZ WÄHLEN</Button>
         </div>
     );
 }
