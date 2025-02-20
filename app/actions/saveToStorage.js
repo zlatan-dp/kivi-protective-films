@@ -4,13 +4,15 @@ const STORAGE_KEY = "quizAnswersKiviFilms"; // Унікальний ключ д�
 
 // Функція отримання масиву з localStorage
 export const getStoredAnswers = () => {
-    const storedData = localStorage.getItem(STORAGE_KEY);
-    return storedData ? JSON.parse(storedData) : [[]]; // Якщо немає – створюємо пустий масив
-  };
+  if (typeof window === "undefined") return [[]]; // Перевіряємо, чи є доступ до window
+  const storedData = localStorage.getItem(STORAGE_KEY);
+  return storedData ? JSON.parse(storedData) : [[]];
+};
 
-// Функція збереження нового кроку в localStorage
-export const saveAnswer = (stepData) => {
-    const storedAnswers = getStoredAnswers();
-    storedAnswers[0].push(stepData); // Додаємо в перший підмасив (історія)
-    localStorage.setItem(STORAGE_KEY, JSON.stringify(storedAnswers));
-  };
+// Функція збереження масиву в localStorage
+export const saveAnswer = (answer) => {
+  if (typeof window === "undefined") return;
+  const storedData = getStoredAnswers();
+  storedData[0].push(answer);
+  localStorage.setItem(STORAGE_KEY, JSON.stringify(storedData));
+};
