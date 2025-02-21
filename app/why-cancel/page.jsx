@@ -5,6 +5,8 @@ import styles from "./page.module.css";
 import {useRouter} from "next/navigation"
 import { useState } from "react";
 
+import { saveAnswer } from "../actions/saveToStorage";
+
 import QuizWrap from "../components/QuizWrap/QuizWrap"
 import WhiteBtn from "../components/whiteBtn/whiteBtn";
 import TranspBtn from "../components/transparentBtn/transparentBtn";
@@ -39,11 +41,13 @@ export default function WhyCanceled() {
             return;
         }
 
-        console.log("Selected reason:", finalAnswer);
+        // console.log("Selected reason:", finalAnswer);
+        saveAnswer({ step: 6, type: "exit", answer: finalAnswer, question: "Why did you refuse to buy?" })
         router.push("/thanks");
     };
 
     const goToBuy = () => {
+        saveAnswer({ step: 6, type: "return to films"})
         router.push("/choose-film");
     }
 

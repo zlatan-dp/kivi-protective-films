@@ -64,6 +64,7 @@
     flex-direction: column;
     gap: 15px;
     overflow-y: auto;
+    -webkit-overflow-scrolling: touch; /* Плавний скрол для iOS */
 }
 
 .dropdownItem {

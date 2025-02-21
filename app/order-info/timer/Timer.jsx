@@ -12,7 +12,7 @@ export default function CountdownTimer() {
   useEffect(() => {
     setHasMounted(true);
 
-    let savedTargetTime = localStorage.getItem("countdown_target_time");
+    let savedTargetTime = localStorage.getItem("kivi_countdown_target_time");
 
     if (savedTargetTime) {
       savedTargetTime = parseInt(savedTargetTime, 10);
@@ -24,7 +24,7 @@ export default function CountdownTimer() {
         ? savedTargetTime
         : now + 10 * 24 * 60 * 60 * 1000; // 10 днів
 
-    localStorage.setItem("countdown_target_time", targetTime);
+    localStorage.setItem("kivi_countdown_target_time", targetTime);
     setTimeLeft(targetTime - now);
 
     const interval = setInterval(() => {

@@ -49,8 +49,8 @@ export default function Information () {
     }
     return (
                 <QuizWrap>
-                    <BackBtn />
-                    <CloseBtn />
+                    <BackBtn step = {4}/>
+                    <CloseBtn step = {4}/>
                     <h2 className={styles.title}>Ihre Daten</h2>
                     <div className={styles.imageWrap}></div>
                     <form onSubmit={goToNextStep} className={styles.form}>

@@ -31,7 +31,7 @@ export default function OrderInformation() {
 
     useEffect(() => {
         setIsClient(true);
-        const savedFilms = localStorage.getItem("selectedFilms");
+        const savedFilms = localStorage.getItem("selectedKiviProtectionFilms");
         if (savedFilms) {
             setSelectedFilms(JSON.parse(savedFilms));
         }
@@ -68,8 +68,8 @@ export default function OrderInformation() {
 
     return (
         <QuizWrap>
-            <BackBtn />
-            <CloseBtn />
+            <BackBtn step = {3}/>
+            <CloseBtn step = {3}/>
             <h2 className={styles.title}>Bis zum Ende der Aktion:</h2>
             <CountdownTimer />
             <div className={styles.infoSection}>                

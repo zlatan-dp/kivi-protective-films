@@ -25,18 +25,18 @@ export default function ChooseFilm() {
 
     useEffect(() => {
         setIsClient(true);
-        const savedFilms = localStorage.getItem("selectedFilms");
+        const savedFilms = localStorage.getItem("selectedKiviProtectionFilms");
         if (savedFilms) {
             setSelectedFilms(JSON.parse(savedFilms));
         } else {
-            localStorage.setItem("selectedFilms", JSON.stringify(defaultFilms));
+            localStorage.setItem("selectedKiviProtectionFilms", JSON.stringify(defaultFilms));
             setSelectedFilms(defaultFilms);
         }
     }, []);
 
     useEffect(() => {
         if (isClient) {
-            localStorage.setItem("selectedFilms", JSON.stringify(selectedFilms));
+            localStorage.setItem("selectedKiviProtectionFilms", JSON.stringify(selectedFilms));
         }
     }, [selectedFilms, isClient]);
 
@@ -69,7 +69,7 @@ export default function ChooseFilm() {
 
     return (
         <QuizWrap>
-            <CloseBtn />
+            <CloseBtn step = {2}/>
             <h2 className={styles.title}>Welche Folie<br/>benötigen Sie?</h2>
             <div className={styles.chooseWrap}>
                 <p className={styles.chooseText}>Diagonale</p>
