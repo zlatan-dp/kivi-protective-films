@@ -11,3 +11,21 @@
     color: var(--white);
     opacity: 0.75;
 }
+
+.linksWrap {
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    justify-content: center;
+}
+
+.links {
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 171%;
+    color: var(--white);
+    opacity: 0.75;
+    text-align: center;
+
+}
