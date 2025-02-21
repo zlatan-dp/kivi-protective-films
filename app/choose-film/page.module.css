@@ -67,7 +67,7 @@
 }
 
 .orderWrap::-webkit-scrollbar-thumb {
-    background-color: #bb0606fd; /* Синя "штука" */
+    background-color: #ffffff36; /* Синя "штука" */
     border-radius: 4px; /* Закруглені краї */
 }
 
@@ -79,5 +79,5 @@
 /* Для Firefox */
 .orderWrap {
     scrollbar-width: thin; /* Тонкий скролбар */
-    scrollbar-color:#bb0606fd transparent; /* Синя "штука", прозорий фон */
+    scrollbar-color:#ffffff36 transparent; /* Синя "штука", прозорий фон */
 }
