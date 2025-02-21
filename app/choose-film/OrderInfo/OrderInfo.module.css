@@ -53,13 +53,10 @@
 }
 
 .dropdown {
-    /* position: absolute; */
-    position: fixed; /* Щоб він не залежав від батьківського контейнера */
-    max-width: 400px;
+    position: absolute;
+    z-index: 100;
     bottom: 0;
-    left: 0;
-    bottom: 0;
-    width: 100%;
+    width: 100vw;
     height: 301px;
     padding: 40px;
     border-radius: 40px 40px 0 0;
@@ -89,28 +86,5 @@
 
 
 
-/* Для Chrome, Edge, Safari */
-.dropdown::-webkit-scrollbar {
-    width: 8px; /* Товщина скролбара */
-}
 
-.dropdown::-webkit-scrollbar-track {
-    background: transparent; /* Прихований фон */
-}
-
-.dropdown::-webkit-scrollbar-thumb {
-    background-color: #0081ff; /* Синя "штука" */
-    border-radius: 4px; /* Закруглені краї */
-}
-
-/* Прибираємо стрілки прокрутки */
-.dropdown::-webkit-scrollbar-button {
-    display: none; 
-}
-
-/* Для Firefox */
-.dropdown {
-    scrollbar-width: thin; /* Тонкий скролбар */
-    scrollbar-color: #0081ff transparent; /* Синя "штука", прозорий фон */
-}
 
