@@ -53,7 +53,11 @@
 }
 
 .dropdown {
-    position: absolute;
+    /* position: absolute; */
+    position: fixed; /* Щоб він не залежав від батьківського контейнера */
+    max-width: 400px;
+    bottom: 0;
+    left: 0;
     bottom: 0;
     width: 100%;
     height: 301px;
@@ -64,7 +68,6 @@
     flex-direction: column;
     gap: 15px;
     overflow-y: auto;
-    -webkit-overflow-scrolling: touch; /* Плавний скрол для iOS */
 }
 
 .dropdownItem {
@@ -83,6 +86,8 @@
     background-repeat: no-repeat;
     background-position: center;
 }
+
+
 
 /* Для Chrome, Edge, Safari */
 .dropdown::-webkit-scrollbar {
