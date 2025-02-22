@@ -73,7 +73,7 @@ export default function OrderInformation() {
             <h2 className={styles.title}>Bis zum Ende der Aktion:</h2>
             <CountdownTimer />
             <div className={styles.infoSection}>                
-                <span className={styles.count}>×{totalItems}</span>
+                <span className={styles.count}>×101</span>
                 <span className={styles.order}>{orderText}</span>
                 <div className={styles.totalWrap}>
                     <div className={styles.priceWrap}>
