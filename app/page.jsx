@@ -9,6 +9,7 @@ import AdvantageSection from "./components/Advantage/Advantage"
 import Faq from "./components/Faq/Faq"
 import Feedback from "./components/Feedback/Feedback"
 import Explanation from "./components/Explanation/Explanation"
+import ScrollToTop from "./components/upBtn/upBtn"
 
 import { getStoredAnswers } from "./actions/saveToStorage"
 
@@ -45,6 +46,7 @@ export default function filmsLanding() {
             <Faq />
             <Feedback />
             <Explanation />
+            <ScrollToTop />
         </>
     )
 }

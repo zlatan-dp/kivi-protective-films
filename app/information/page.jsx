@@ -25,14 +25,19 @@ export default function Information () {
 
     const validateForm = () => {
         let newErrors = {};
+        const emailPattern = /^[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\.[A-Za-z]{2,}$/;
 
         if (!name.trim()) {
             newErrors.name = "Bitte geben Sie Ihren Namen ein";
+        } else if (name.trim().length < 2) {
+            newErrors.name = "Mindestens 2 Buchstaben erforderlich";
+        } else if (!/^[A-Za-zÄÖÜäöüßА-Яа-яЁё\s-]+$/.test(name)) {
+            newErrors.name = "Nur Buchstaben erlaubt";
         }
 
         if (!email.trim()) {
             newErrors.email = "Bitte geben Sie Ihre E-Mail-Adresse ein";
-        } else if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) {
+        } else if (!emailPattern.test(email)) {
             newErrors.email = "Ungültige E-Mail-Adresse";
         }
 

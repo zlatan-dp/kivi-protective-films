@@ -25,7 +25,8 @@ export default function WhyCanceled() {
 
     const handleOptionChange = (option) => {
         setSelectedOption(option);
-        setCustomInput(""); // Очистка кастомного вводу при виборі стандартного варіанту
+        setError(""); // Очищаємо помилку при зміні відповіді
+        // setCustomInput(""); // Очистка кастомного вводу при виборі стандартного варіанту
     };
 
     const handleCustomInputChange = (e) => {
@@ -38,6 +39,12 @@ export default function WhyCanceled() {
 
         if (!finalAnswer) {
             setError("Bitte wählen Sie eine Antwort.");
+            return;
+        }
+
+                // Перевірка мінімальної кількості символів для кастомної відповіді
+        if (selectedOption === "custom" && customInput.length < 5) {
+            setError("Mindestens 5 Zeichen erforderlich.");
             return;
         }
 

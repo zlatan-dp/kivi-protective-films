@@ -22,6 +22,7 @@ export default function ChooseFilm() {
     // Спочатку `selectedFilms` порожній, щоб уникнути SSR-проблем
     const [selectedFilms, setSelectedFilms] = useState([]);
     const [isClient, setIsClient] = useState(false);
+    const [errorMessage, setErrorMessage] = useState("");
 
     useEffect(() => {
         setIsClient(true);
@@ -41,16 +42,65 @@ export default function ChooseFilm() {
     }, [selectedFilms, isClient]);
 
     // Додає новий OrderInfo
+    // const addNewFilm = () => {
+    //     const newFilms = [...selectedFilms, { diagonal: 32, count: 1 }];
+    //     setSelectedFilms(newFilms);
+    // };
+
+    // const addNewFilm = () => {
+    //     setSelectedFilms((prev) => {
+    //         const availableDiagonals = [32, 43, 50, 55, 65];
+    
+    //         // Знаходимо першу відсутню діагональ
+    //         const existingDiagonals = prev.map(f => f.diagonal);
+    //         const newDiagonal = availableDiagonals.find(d => !existingDiagonals.includes(d));
+    
+    //         if (!newDiagonal) return prev; // Якщо всі вже додані, нічого не робимо
+
+              
+    //         return [...prev, { diagonal: newDiagonal, count: 1 }];
+    //     });
+    // };
+
     const addNewFilm = () => {
-        const newFilms = [...selectedFilms, { diagonal: 32, count: 1 }];
+        const availableDiagonals = [32, 43, 50, 55, 65].filter(d => 
+            !selectedFilms.some(f => f.diagonal === d) // Знаходимо доступні
+        );
+    
+        if (availableDiagonals.length === 0) {
+            setErrorMessage("Alle verfügbaren Diagonalen wurden bereits hinzugefügt."); // Повідомлення німецькою
+            return;
+        }
+    
+        const newFilms = [...selectedFilms, { diagonal: availableDiagonals[0], count: 1 }];
         setSelectedFilms(newFilms);
+        setErrorMessage(""); // При успішному додаванні прибираємо повідомлення
     };
 
     // Оновлює OrderInfo
+    // const updateFilm = (index, newValues) => {
+    //     setSelectedFilms((prev) =>
+    //         prev.map((film, i) => (i === index ? { ...film, ...newValues } : film))
+    //     );
+    // };
+
     const updateFilm = (index, newValues) => {
-        setSelectedFilms((prev) =>
-            prev.map((film, i) => (i === index ? { ...film, ...newValues } : film))
-        );
+        setSelectedFilms((prev) => {
+            const { diagonal } = newValues;
+    
+            if (diagonal) {
+                const existingIndex = prev.findIndex(f => f.diagonal === diagonal);
+    
+                if (existingIndex !== -1 && existingIndex !== index) {
+                    // Якщо вже є така діагональ, збільшуємо count
+                    return prev.map((film, i) =>
+                        i === existingIndex ? { ...film, count: film.count + 1 } : film
+                    ).filter((_, i) => i !== index); // Видаляємо поточний, бо він вже є
+                }
+            }
+    
+            return prev.map((film, i) => (i === index ? { ...film, ...newValues } : film));
+        });
     };
 
     // Видаляє OrderInfo
@@ -84,9 +134,11 @@ export default function ChooseFilm() {
                         count={film.count}
                         onUpdate={updateFilm}
                         onRemove={selectedFilms.length > 1 ? () => removeFilm(index) : null}
+                        selectedFilms={selectedFilms} // передаємо масив у OrderInfo
                     />
                 ))}
             </div>
+            {errorMessage && <p className={styles.errorText}>{errorMessage}</p>}
             <p className={styles.orderText}>
                 Sie haben {selectedFilms.length} {selectedFilms.length === 1 ? "Folie " : "Folien "} 
                 für {selectedFilms.map(f => `${f.diagonal}” - ${f.count} Stk.`).join(", ")} 

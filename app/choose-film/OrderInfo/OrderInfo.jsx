@@ -2,9 +2,12 @@ import { useState } from "react";
 
 import styles from './OrderInfo.module.css'
 
-export default function OrderInfo({ index, diagonal, count, onUpdate, onRemove }) {
+export default function OrderInfo({ index, diagonal, count, onUpdate, onRemove, selectedFilms }) {
     const [showDropdown, setShowDropdown] = useState(false);
-    const availableDiagonals = [32, 43, 50, 55, 65];
+    // const availableDiagonals = [32, 43, 50, 55, 65];
+    const availableDiagonals = [32, 43, 50, 55, 65].filter(d => 
+        !selectedFilms.some(f => f.diagonal === d) // Приховуємо вибрані
+    );
 
     return (
         <div className={styles.wrapper}>
@@ -15,7 +18,7 @@ export default function OrderInfo({ index, diagonal, count, onUpdate, onRemove }
             </div>
 
             {/* Дропдаун для вибору діагоналі */}
-            {showDropdown && (
+            {showDropdown && availableDiagonals.length > 0 && (
                 <div className={styles.dropdown}>
                     {availableDiagonals.map(size => (
                         <div

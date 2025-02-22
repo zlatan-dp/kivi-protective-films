@@ -25,7 +25,7 @@ export default function Feedback() {
                     {FeedbackData.map(({id, firstName, surName, date, rating, text}) => (
                         <SwiperSlide key={id} className={styles.slide}>
                                 <p className={styles.name}>{firstName}</p>
-                                <p className={styles.name}>{surName}</p>
+                                {/* <p className={styles.name}>{surName}</p> */}
                                 <p className={styles.date}>{date}</p>
                                 <div className={styles.rating}>
                                 {Array.from({ length: rating }).map((_, index) => (

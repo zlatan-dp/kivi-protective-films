@@ -81,3 +81,9 @@
     scrollbar-width: thin; /* Тонкий скролбар */
     scrollbar-color:#ffffff36 transparent; /* Синя "штука", прозорий фон */
 }
+
+.errorText {
+    margin-top: 5px;
+    color: rgb(247, 147, 147);
+    font-size: 12px;
+}
