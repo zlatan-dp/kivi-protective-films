@@ -20,6 +20,7 @@ export default function filmsLanding() {
     return (
         <>
             <Header />
+            <div style={{width: "100%", height: "64px",}}></div>
             <HeroSection />
             <FilmsInfo />
             <Protective />

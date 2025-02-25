@@ -1,7 +1,7 @@
 .container {
     position: relative;
     padding: 20px;
-    margin-top: 64px;
+    /* margin-top: 64px; */
     margin-bottom: 40px;
     background-image: url("/images/hero_bg.png");
     background-color: var(--black);
