@@ -17,7 +17,6 @@ export default function filmsLanding() {
 
     console.log(getStoredAnswers());
     
-
     return (
         <>
             <Header />
