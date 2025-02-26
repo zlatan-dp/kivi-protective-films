@@ -4,15 +4,24 @@ import styles from "./button.module.css"
 
 import {useRouter} from "next/navigation"
 
-import { saveAnswer } from "../../actions/saveToStorage"
+import { saveAnswer, getCurrentTime } from "../../actions/saveToStorage"
 
 export default function Button ({ children, href }) {
 
     const router = useRouter()
 
-    const goToNextStep = () => {
+    const goToNextStep = async () => {
 
-        saveAnswer({ step: 1, type: "transition to a quiz"})
+        await saveAnswer(
+            {
+                step: 1,
+                type: "info",
+                question: "transition to a quiz",
+                answer: 'next',
+                time: await getCurrentTime(),
+              }
+        )
+        
         router.push(href)
         }
 

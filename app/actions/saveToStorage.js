@@ -9,10 +9,18 @@ export const getStoredAnswers = () => {
   return storedData ? JSON.parse(storedData) : [[]];
 };
 
+export const getCurrentTime = async () => {
+  const now = new Date();
+  return now.toISOString().slice(0, 16).replace("T", " ");
+}
+
 // Функція збереження масиву в localStorage
-export const saveAnswer = (answer) => {
-  if (typeof window === "undefined") return;
-  const storedData = getStoredAnswers();
-  storedData[0].push(answer);
-  localStorage.setItem(STORAGE_KEY, JSON.stringify(storedData));
+export const saveAnswer = async (answer) => {
+  try {
+    if (!answer) return;
+    const storedData = [...getStoredAnswers(), answer];
+    localStorage.setItem(STORAGE_KEY, JSON.stringify(storedData));
+  } catch (error) {
+    console.error("Error saving answer to localStorage:", error);
+  }
 };

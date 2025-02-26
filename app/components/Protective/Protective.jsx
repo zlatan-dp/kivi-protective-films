@@ -10,7 +10,7 @@ import SectionTitle from "../sectionTitle/sectionTitle";
 import Button from "../button/button";
 import { ProtectiveData } from "./ProtectiveData";
 
-export default function Protective() {
+export default function Protective({href}) {
      return (
         <div className={styles.protectiveContainer}>
             <SectionTitle align="center">4 Schutzschichten</SectionTitle>
@@ -32,7 +32,7 @@ export default function Protective() {
                     ))}
                 </Swiper>
 
-            <Button href="/choose-film">JETZT SCHUTZ WÄHLEN</Button>
+            <Button href={href}>JETZT SCHUTZ WÄHLEN</Button>
         </div>
     );
 }

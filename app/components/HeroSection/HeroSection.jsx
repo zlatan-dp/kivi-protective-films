@@ -3,7 +3,7 @@ import Image from "next/image"
 
 import Button from "../button/button"
 
-export default function Hero() {
+export default function Hero({href}) {
     return (
         <div className={styles.container}>
             <div className={styles.heroInfo}>
@@ -17,7 +17,7 @@ export default function Hero() {
                 height={170}
                 style={{ width: "100%", height: "auto" }} />
             </div>
-            <Button href="/choose-film">Schutzfolie wählen</Button>
+            <Button href={href}>Schutzfolie wählen</Button>
             <div className={styles.arrows}></div>
         </div>   
     )
